@@ -14,9 +14,6 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: block;
   width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 26px;
 `
 
 export default EstiloGlobal
