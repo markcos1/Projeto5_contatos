@@ -21,8 +21,13 @@ export const BarraPesquisa = styled.input`
   width: 30%;
 `
 export const BotaoAdicionar = styled.button`
-  padding: 8px;
+  width: 40px;
+  height: 40px;
   background-color: #008000;
   border-radius: 50%;
   cursor: pointer;
+  margin-left: 3px;
+  border: none;
+  color: #fff;
+  font-size: large;
 `
