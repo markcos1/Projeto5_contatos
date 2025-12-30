@@ -5,6 +5,7 @@ export type Props = {
   nome: string
   email: string
   telefone: number
+  id: number
 }
 
 const CardContato = ({ nome, email, telefone }: Props) => {
