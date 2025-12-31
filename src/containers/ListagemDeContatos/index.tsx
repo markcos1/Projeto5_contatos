@@ -4,17 +4,17 @@ import { ContainerLista } from './styles'
 import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
-  const estado = useSelector((state: RootReducer) => state.contatos)
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
   return (
     <ContainerLista>
       <ul>
-        {estado.map((l) => (
+        {itens.map((l) => (
           <li key={l.nome}>
             <CardContato
               nome={l.nome}
               email={l.email}
               telefone={l.telefone}
-              id={0}
+              id={l.id}
             />
           </li>
         ))}
