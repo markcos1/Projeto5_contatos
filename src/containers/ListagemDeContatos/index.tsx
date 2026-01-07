@@ -5,10 +5,19 @@ import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
   const { itens } = useSelector((state: RootReducer) => state.contatos)
+  const { termo } = useSelector((state: RootReducer) => state.filtro)
+
+  const filtraTarefas = () => {
+    return itens.filter(
+      (item) => item.nome.toLowerCase().search(termo.toLowerCase()) >= 0
+    )
+  }
+
   return (
     <ContainerLista>
+      <p>2 contatos nomeados como: {termo}</p>
       <ul>
-        {itens.map((l) => (
+        {filtraTarefas().map((l) => (
           <li key={l.nome}>
             <CardContato
               nome={l.nome}

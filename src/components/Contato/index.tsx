@@ -31,7 +31,6 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
           disabled={!estaEditando}
           value={nomeUsuario}
           onChange={(evento) => setNomeUsuario(evento.target.value)}
-          htmlFor="nome"
         >
           Nome: {nome}
         </S.Dados>
@@ -46,7 +45,7 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
               onClick={() => {
                 dispatch(
                   editar({
-                    id: id,
+                    id,
                     nome,
                     telefone,
                     email

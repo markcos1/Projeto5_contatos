@@ -41,7 +41,7 @@ const tarefasSlice = createSlice({
       const indexDoContato = state.itens.findIndex(
         (l) => l.id === action.payload.id
       )
-      if ((indexDoContato) => 0) {
+      if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload
       }
     }
