@@ -12,30 +12,60 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaeditando] = useState(false)
   const [nomeUsuario, setNomeUsuario] = useState('')
+  const [emailUsuario, setEmailUsuario] = useState('')
+  const [telefoneUsuario, setTelefoneUsuario] = useState('')
 
   useEffect(() => {
     if (nome.length > 0) {
       setNomeUsuario(nome)
+      setEmailUsuario(email)
+      setTelefoneUsuario(telefone.toString())
     }
-  }, [nome])
+  }, [nome, email, telefone])
 
   function cancelarEdicao() {
     setEstaeditando(false)
     setNomeUsuario(nome)
+    setEmailUsuario(email)
+    setTelefoneUsuario(telefone.toString())
   }
   return (
     <S.Cards>
       <S.Foto src="" alt="" />
       <div>
-        <S.Dados
-          disabled={!estaEditando}
-          value={nomeUsuario}
-          onChange={(evento) => setNomeUsuario(evento.target.value)}
-        >
-          Nome: {nome}
+        <S.Dados htmlFor="nome">
+          Nome:
+          {
+            <S.inp
+              type="text"
+              disabled={!estaEditando}
+              value={nomeUsuario}
+              onChange={(evento) => setNomeUsuario(evento.target.value)}
+            />
+          }
         </S.Dados>
-        <S.Dados htmlFor="email">Email: {email}</S.Dados>
-        <S.Dados htmlFor="telefone">Telefone: {telefone}</S.Dados>
+        <S.Dados htmlFor="email">
+          Email:
+          {
+            <S.inp
+              type="text"
+              disabled={!estaEditando}
+              value={emailUsuario}
+              onChange={(evento) => setEmailUsuario(evento.target.value)}
+            />
+          }
+        </S.Dados>
+        <S.Dados htmlFor="telefone">
+          Telefone:
+          {
+            <S.inp
+              type="text"
+              disabled={!estaEditando}
+              value={telefoneUsuario}
+              onChange={(evento) => setTelefoneUsuario(evento.target.value)}
+            />
+          }
+        </S.Dados>
       </div>
       <S.DiviBotoes>
         {estaEditando ? (
@@ -46,9 +76,9 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
                 dispatch(
                   editar({
                     id,
-                    nome,
-                    telefone,
-                    email
+                    nome: nomeUsuario,
+                    telefone: Number(telefoneUsuario),
+                    email: emailUsuario
                   })
                 )
                 setEstaeditando(false)

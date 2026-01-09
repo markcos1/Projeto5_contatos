@@ -26,6 +26,14 @@ export const Dados = styled.label`
   margin: 8px;
   display: block;
 `
+export const inp = styled.input`
+  margin-left: 8px;
+  padding: 4px;
+  border-radius: 8px;
+  border: none;
+  color: #000;
+  background-color: #fff;
+`
 export const DiviBotoes = styled.div`
   display: block;
   margin-left: auto;
