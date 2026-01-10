@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import CardContato from '../../components/Contato'
-import { ContainerLista } from './styles'
+import { ContainerLista, Resultado } from './styles'
 import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
@@ -13,11 +13,15 @@ const ListaDeContatos = () => {
     )
   }
 
+  const tarefas = filtraTarefas()
+
   return (
     <ContainerLista>
-      <p>2 contatos nomeados como: {termo}</p>
+      <Resultado>
+        {tarefas.length} contatos nomeados como: {termo}
+      </Resultado>
       <ul>
-        {filtraTarefas().map((l) => (
+        {tarefas.map((l) => (
           <li key={l.nome}>
             <CardContato
               nome={l.nome}
