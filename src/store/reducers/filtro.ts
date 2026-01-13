@@ -6,7 +6,7 @@ type FiltroState = {
 }
 
 const initialState: FiltroState = {
-  termo: ' ',
+  termo: '',
   criterio: 'todos'
 }
 

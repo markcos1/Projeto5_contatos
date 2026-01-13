@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { BarraPesquisa, BotaoAdicionar, Cabeca, Titulo } from './styles'
+import { BarraPesquisa, Botao, Cabeca, Titulo } from './styles'
 import { RootReducer } from '../../store'
 import { alterarTermo } from '../../store/reducers/filtro'
 
@@ -16,7 +16,7 @@ const Cabecalho = () => {
         value={termo}
         onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
       />
-      <BotaoAdicionar>+</BotaoAdicionar>
+      <Botao to="/novo">+</Botao>
     </Cabeca>
   )
 }

@@ -31,7 +31,7 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
   }
   return (
     <S.Cards>
-      <S.Foto src="" alt="" />
+      <S.Foto src="" alt="Foto de Perfil" />
       <div>
         <S.Dados htmlFor="nome">
           Nome:
