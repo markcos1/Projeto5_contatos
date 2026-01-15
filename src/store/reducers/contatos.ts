@@ -50,10 +50,15 @@ const tarefasSlice = createSlice({
         (contato) =>
           contato.nome.toLowerCase() === action.payload.nome.toLowerCase()
       )
+      if (contatoJaExiste) {
+        alert('Contato já cadastrado!')
+      } else {
+        state.itens.push(action.payload)
+      }
     }
   }
 })
 
-export const { remover, editar } = tarefasSlice.actions
+export const { remover, editar, cadastrar } = tarefasSlice.actions
 
 export default tarefasSlice.reducer

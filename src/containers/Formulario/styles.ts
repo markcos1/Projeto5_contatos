@@ -35,6 +35,22 @@ export const titulo = styled.h2`
   padding: 16px;
   text-align: center;
 `
+export const LabelStyled = styled.label`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`
+
+export const InputHidden = styled.input`
+  display: none;
+`
+
 export const Labels = styled.label`
   margin-top: 8px;
   margin-bottom: 8px;
@@ -53,6 +69,7 @@ export const BotaoCadastrar = styled.button`
   padding: 8px;
   margin: 8px;
   border-radius: 4px;
+  cursor: pointer;
   border-style: none;
 `
 export const BotaoCancelar = styled.button`
@@ -62,4 +79,5 @@ export const BotaoCancelar = styled.button`
   border-radius: 4px;
   border-style: none;
   margin: 8px;
+  cursor: pointer;
 `
