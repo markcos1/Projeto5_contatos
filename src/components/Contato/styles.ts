@@ -14,10 +14,13 @@ export const Cards = styled.div`
 
 export const Foto = styled.img`
   background-color: #e7e7e7;
-  width: 70px;
-  height: 70px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
-  object-fit: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 `
 
 export const Dados = styled.label`

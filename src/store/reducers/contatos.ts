@@ -4,28 +4,8 @@ import Contato from '../../models/Contato'
 type TarefaState = {
   itens: Contato[]
 }
-
 const initialState: TarefaState = {
-  itens: [
-    {
-      id: 1,
-      nome: 'Marcos Paulo Coelho Ferreira',
-      email: 'lmp4444@gmail.com',
-      telefone: 7539324555
-    },
-    {
-      id: 2,
-      nome: 'Evelin Oliveira',
-      email: 'evy55@gmail.com',
-      telefone: 7539324555
-    },
-    {
-      id: 3,
-      nome: 'Guiomar Almeida',
-      email: 'aguiomar@gmail.com',
-      telefone: 7539324555
-    }
-  ]
+  itens: []
 }
 
 const tarefasSlice = createSlice({
@@ -45,7 +25,7 @@ const tarefasSlice = createSlice({
         state.itens[indexDoContato] = action.payload
       }
     },
-    cadastrar: (state, action: PayloadAction<Contato>) => {
+    cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
       const contatoJaExiste = state.itens.find(
         (contato) =>
           contato.nome.toLowerCase() === action.payload.nome.toLowerCase()
@@ -53,7 +33,13 @@ const tarefasSlice = createSlice({
       if (contatoJaExiste) {
         alert('Contato já cadastrado!')
       } else {
-        state.itens.push(action.payload)
+        const ultimaTarefa = state.itens[state.itens.length - 1]
+
+        const contatoNovo = {
+          ...action.payload,
+          id: ultimaTarefa ? ultimaTarefa.id + 1 : 1
+        }
+        state.itens.push(contatoNovo)
       }
     }
   }

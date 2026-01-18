@@ -13,6 +13,10 @@ export const Cabeca = styled.div`
   a {
     display: inline-block;
     text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 44px;
+    margin-left: 17px;
   }
 `
 
@@ -29,14 +33,12 @@ export const BarraPesquisa = styled.input`
 `
 export const Botao = styled(Link)`
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   border-radius: 50%;
   height: 44px;
   width: 44px;
   background-color: #44bd32;
   color: #fff;
   text-decoration: none;
-  font-size: 40px;
-  margin-left: 16px;
+  align-content: center;
 `

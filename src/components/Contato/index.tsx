@@ -11,27 +11,30 @@ export type Props = Contato
 const CardContato = ({ nome, email, telefone, id }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaeditando] = useState(false)
+  const [fotoUsuario, setFotoUsuario] = useState('')
   const [nomeUsuario, setNomeUsuario] = useState('')
   const [emailUsuario, setEmailUsuario] = useState('')
   const [telefoneUsuario, setTelefoneUsuario] = useState('')
 
   useEffect(() => {
     if (nome.length > 0) {
+      setFotoUsuario(fotoUsuario)
       setNomeUsuario(nome)
       setEmailUsuario(email)
       setTelefoneUsuario(telefone.toString())
     }
-  }, [nome, email, telefone])
+  }, [fotoUsuario, nome, email, telefone])
 
   function cancelarEdicao() {
     setEstaeditando(false)
+    setFotoUsuario(fotoUsuario)
     setNomeUsuario(nome)
     setEmailUsuario(email)
     setTelefoneUsuario(telefone.toString())
   }
   return (
     <S.Cards>
-      <S.Foto src="" alt="Foto de Perfil" />
+      <S.Foto src={fotoUsuario} alt="Foto do Contato" />
       <div>
         <S.Dados htmlFor="nome">
           Nome:
@@ -75,6 +78,7 @@ const CardContato = ({ nome, email, telefone, id }: Props) => {
               onClick={() => {
                 dispatch(
                   editar({
+                    foto: null,
                     id,
                     nome: nomeUsuario,
                     telefone: Number(telefoneUsuario),

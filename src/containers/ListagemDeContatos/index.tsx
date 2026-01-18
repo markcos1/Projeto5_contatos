@@ -24,6 +24,7 @@ const ListaDeContatos = () => {
         {tarefas.map((l) => (
           <li key={l.nome}>
             <CardContato
+              foto={l.foto}
               nome={l.nome}
               email={l.email}
               telefone={l.telefone}

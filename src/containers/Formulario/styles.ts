@@ -11,7 +11,6 @@ export const Forma = styled.form`
 `
 export const CampoFoto = styled.div`
   display: flex;
-  margin: 8px;
   align-items: center;
   justify-content: center;
   margin-bottom: 26px;
@@ -49,6 +48,25 @@ export const LabelStyled = styled.label`
 
 export const InputHidden = styled.input`
   display: none;
+`
+export const Avatar = styled.img`
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+`
+export const Placeholder = styled.label`
+  width: 88px;
+  height: 88px;
+  padding: 46px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 `
 
 export const Labels = styled.label`
