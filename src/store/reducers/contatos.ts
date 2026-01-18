@@ -5,7 +5,15 @@ type TarefaState = {
   itens: Contato[]
 }
 const initialState: TarefaState = {
-  itens: []
+  itens: [
+    {
+      id: 1,
+      nome: 'Marcos Paulo',
+      email: '908marks@gmail.com',
+      telefone: 11987654321,
+      foto: null
+    }
+  ]
 }
 
 const tarefasSlice = createSlice({
