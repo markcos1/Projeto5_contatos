@@ -22,22 +22,22 @@ export const Foto = styled.img`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 80px;
-    height: 70px;
-    padding: 33px;
+  @media (max-width: 412px) {
+    width: 40px;
+    height: 40px;
     font-size: large;
+    padding: 29px;
   }
 `
 
 export const Dados = styled.label`
   font-size: 14px;
   font-weight: bold;
-  margin: 8px;
+  margin: 3px;
   display: block;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    margin-left: 18px;
+  @media (max-width: 412px) {
+    margin-left: 8px;
   }
 `
 export const inp = styled.input`
@@ -48,16 +48,16 @@ export const inp = styled.input`
   color: #000;
   background-color: #fff;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    margin-left: auto;
+  @media (max-width: 412px) {
+    margin-left: 1px;
   }
 `
 export const DiviBotoes = styled.div`
   display: block;
-  margin-left: auto;
+  margin: 0;
 `
 export const Botao = styled.button`
-  padding: 8px;
+  padding: 4px;
   cursor: pointer;
   margin-left: auto;
   width: 100%;
