@@ -1,5 +1,5 @@
 class Contato {
-  foto: string | null = null
+  foto?: string | null
   nome: string
   email: string
   telefone: number

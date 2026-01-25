@@ -17,23 +17,26 @@ export const Cabeca = styled.div`
     font-size: 24px;
     line-height: 44px;
     margin-left: 17px;
+
+    @media (min-width: 320) and (max-width: 412px) {
+      margin-left: 6px;
+    }
   }
 `
 
 export const Titulo = styled.h1`
   font-weight: bold;
   padding: 8px;
-  margin-right: 50px;
 `
 export const BarraPesquisa = styled.input`
   border-radius: 8px;
   padding: 8px;
   border-color: none;
-  width: 35%;
+  width: 50%;
+  margin-left: 40px;
 `
 export const Botao = styled(Link)`
   display: flex;
-
   border-radius: 50%;
   height: 44px;
   width: 44px;

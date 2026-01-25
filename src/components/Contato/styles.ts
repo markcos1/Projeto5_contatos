@@ -21,6 +21,13 @@ export const Foto = styled.img`
   text-align: center;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 80px;
+    height: 70px;
+    padding: 33px;
+    font-size: large;
+  }
 `
 
 export const Dados = styled.label`
@@ -28,6 +35,10 @@ export const Dados = styled.label`
   font-weight: bold;
   margin: 8px;
   display: block;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-left: 18px;
+  }
 `
 export const inp = styled.input`
   margin-left: 8px;
@@ -36,6 +47,10 @@ export const inp = styled.input`
   border: none;
   color: #000;
   background-color: #fff;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-left: auto;
+  }
 `
 export const DiviBotoes = styled.div`
   display: block;
@@ -50,6 +65,7 @@ export const Botao = styled.button`
   border-radius: 8px;
   font-weight: bold;
   font-size: 12px;
+  margin: 5px;
 `
 export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
