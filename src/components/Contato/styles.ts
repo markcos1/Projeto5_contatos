@@ -10,6 +10,10 @@ export const Cards = styled.div`
   margin-bottom: 3px;
   height: 100%;
   border-radius: 16px;
+
+  @media (max-width: 412px) {
+    padding: 12px;
+  }
 `
 
 export const Foto = styled.img`
@@ -26,7 +30,7 @@ export const Foto = styled.img`
     width: 40px;
     height: 40px;
     font-size: large;
-    padding: 29px;
+    padding: 33px;
   }
 `
 
@@ -50,6 +54,7 @@ export const inp = styled.input`
 
   @media (max-width: 412px) {
     margin-left: 1px;
+    width: 100%;
   }
 `
 export const DiviBotoes = styled.div`
