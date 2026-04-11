@@ -11,7 +11,7 @@ const initialState: TarefaState = {
       nome: 'Marcos Paulo',
       email: '908marks@gmail.com',
       telefone: 11987654321,
-      foto: null
+      foto: 'https://avatars.githubusercontent.com/u/markcos1'
     }
   ]
 }

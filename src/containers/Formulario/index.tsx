@@ -10,7 +10,7 @@ const Formulario = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const [photo, setPhoto] = useState<string | null>(null)
+  const [photo, setPhoto] = useState<string>('')
   const fileInputRef = useRef<HTMLInputElement | null>(null)
   const [novoNome, setNovoNome] = useState<string>('')
   const [novoEmail, setNovoEmail] = useState<string>('')
